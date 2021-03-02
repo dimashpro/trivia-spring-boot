@@ -1,18 +1,21 @@
-package com.learning.game.engine;
+package com.trivia.game.triviaspringboot.engine;
 
 
-import com.learning.game.domain.Answer;
-import com.learning.game.domain.Question;
-import com.learning.game.repository.QuestionRepositoryImpl;
-import com.learning.game.service.QuestionService;
-import com.learning.game.service.QuestionServiceImpl;
+import com.trivia.game.triviaspringboot.domain.Answer;
+import com.trivia.game.triviaspringboot.domain.Question;
+import com.trivia.game.triviaspringboot.repository.QuestionRepositoryImpl;
+import com.trivia.game.triviaspringboot.service.QuestionService;
+import com.trivia.game.triviaspringboot.service.QuestionServiceImpl;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-
+@Component
+@RequiredArgsConstructor
 public class TriviaAdmin {
     public static final int VIEW_QUESTIONS = 1;
     public static final int ADD_QUESTION = 2;

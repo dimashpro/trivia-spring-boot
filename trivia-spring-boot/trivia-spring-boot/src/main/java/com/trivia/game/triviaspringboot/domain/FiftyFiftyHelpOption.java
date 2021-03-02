@@ -1,4 +1,4 @@
-package com.learning.game.domain;
+package com.trivia.game.triviaspringboot.domain;
 
 import java.util.List;
 import java.util.Random;

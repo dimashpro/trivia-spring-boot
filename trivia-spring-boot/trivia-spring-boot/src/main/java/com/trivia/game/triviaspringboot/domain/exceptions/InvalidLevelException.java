@@ -1,4 +1,4 @@
-package com.learning.game.domain.exceptions;
+package com.trivia.game.triviaspringboot.domain.exceptions;
 
 public class InvalidLevelException extends RuntimeException{
     public InvalidLevelException(String s) {

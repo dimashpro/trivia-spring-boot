@@ -1,18 +1,22 @@
-package com.learning.game.engine;
+package com.trivia.game.triviaspringboot.engine;
 
-import com.learning.game.domain.Answer;
-import com.learning.game.domain.AskAudienceHelpOption;
-import com.learning.game.domain.AskFriendHelpOption;
-import com.learning.game.domain.FiftyFiftyHelpOption;
-import com.learning.game.domain.Question;
-import com.learning.game.repository.QuestionRepositoryImpl;
-import com.learning.game.service.QuestionService;
-import com.learning.game.service.QuestionServiceImpl;
+import com.trivia.game.triviaspringboot.domain.Answer;
+import com.trivia.game.triviaspringboot.domain.AskAudienceHelpOption;
+import com.trivia.game.triviaspringboot.domain.AskFriendHelpOption;
+import com.trivia.game.triviaspringboot.domain.FiftyFiftyHelpOption;
+import com.trivia.game.triviaspringboot.domain.Question;
+import com.trivia.game.triviaspringboot.repository.QuestionRepositoryImpl;
+import com.trivia.game.triviaspringboot.service.QuestionService;
+import com.trivia.game.triviaspringboot.service.QuestionServiceImpl;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+@Component
+@RequiredArgsConstructor
 public class TriviaGame {
 
     private final QuestionService questionService = new QuestionServiceImpl(new QuestionRepositoryImpl());
@@ -25,9 +29,9 @@ public class TriviaGame {
     private int questionLevel;
     private boolean gameOver;
 
-    public TriviaGame() {
-        initializeGame();
-    }
+    //public TriviaGame() {
+    //    initializeGame();
+    //}
 
     public void startGame() {
 

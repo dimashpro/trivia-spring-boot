@@ -1,7 +1,7 @@
-package com.learning.game.service;
+package com.trivia.game.triviaspringboot.service;
 
-import com.learning.game.domain.Question;
-import com.learning.game.repository.QuestionRepository;
+import com.trivia.game.triviaspringboot.domain.Question;
+import com.trivia.game.triviaspringboot.repository.QuestionRepository;
 
 import java.util.Collections;
 import java.util.List;

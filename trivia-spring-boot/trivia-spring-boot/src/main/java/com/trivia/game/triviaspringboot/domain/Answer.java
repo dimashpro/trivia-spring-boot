@@ -1,7 +1,7 @@
-package com.learning.game.domain;
+package com.trivia.game.triviaspringboot.domain;
 
 
-import com.learning.game.domain.exceptions.EmptyAnswerTextException;
+import com.trivia.game.triviaspringboot.domain.exceptions.EmptyAnswerTextException;
 
 import java.util.Objects;
 

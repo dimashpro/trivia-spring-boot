@@ -1,8 +1,8 @@
-package com.learning.game.domain;
+package com.trivia.game.triviaspringboot.domain;
 
-import com.learning.game.domain.exceptions.EmptyQuestionTextException;
-import com.learning.game.domain.exceptions.InvalidLevelException;
-import com.learning.game.domain.exceptions.InvalidScoreException;
+import com.trivia.game.triviaspringboot.domain.exceptions.EmptyQuestionTextException;
+import com.trivia.game.triviaspringboot.domain.exceptions.InvalidLevelException;
+import com.trivia.game.triviaspringboot.domain.exceptions.InvalidScoreException;
 
 
 import java.util.ArrayList;

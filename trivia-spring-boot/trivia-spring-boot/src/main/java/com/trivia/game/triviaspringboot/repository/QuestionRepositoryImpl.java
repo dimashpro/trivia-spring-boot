@@ -1,7 +1,7 @@
-package com.learning.game.repository;
+package com.trivia.game.triviaspringboot.repository;
 
-import com.learning.game.domain.Answer;
-import com.learning.game.domain.Question;
+import com.trivia.game.triviaspringboot.domain.Answer;
+import com.trivia.game.triviaspringboot.domain.Question;
 
 import java.sql.*;
 import java.util.ArrayList;

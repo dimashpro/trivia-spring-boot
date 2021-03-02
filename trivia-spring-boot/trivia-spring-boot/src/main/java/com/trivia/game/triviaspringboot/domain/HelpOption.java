@@ -1,4 +1,4 @@
-package com.learning.game.domain;
+package com.trivia.game.triviaspringboot.domain;
 
 abstract class HelpOption {
 

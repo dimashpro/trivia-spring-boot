@@ -1,7 +1,7 @@
-package com.learning.game.demo;
+package com.trivia.game.triviaspringboot.demo;
 
-import com.learning.game.engine.TriviaAdmin;
-import com.learning.game.engine.TriviaGame;
+import com.trivia.game.triviaspringboot.engine.TriviaAdmin;
+import com.trivia.game.triviaspringboot.engine.TriviaGame;
 
 import java.util.Scanner;
 
