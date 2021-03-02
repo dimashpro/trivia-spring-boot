@@ -2,11 +2,18 @@ package com.trivia.game.triviaspringboot.repository;
 
 import com.trivia.game.triviaspringboot.domain.Answer;
 import com.trivia.game.triviaspringboot.domain.Question;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
+@Repository
+@RequiredArgsConstructor
 public class QuestionRepositoryImpl implements QuestionRepository {
     private final String url = "jdbc:postgresql://localhost:5432/";
     private final String database = "trivia-db";
