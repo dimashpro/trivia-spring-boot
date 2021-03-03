@@ -15,13 +15,23 @@ import java.util.List;
 @Repository
 @RequiredArgsConstructor
 public class QuestionRepositoryImpl implements QuestionRepository {
-    private final String url = "jdbc:postgresql://localhost:5432/";
-    private final String database = "trivia-db";
-    private final String userName = "postgres";
-    private final String password = "123456";
+//    private final String url = "jdbc:postgresql://localhost:5432/";
+//    private final String database = "trivia-db";
+//    private final String userName = "postgres";
+//    private final String password = "123456";
+    @Value("${db.url}")
+    private String url;
+    @Value("${db.name}")
+    private String database;
+    @Value("${db.user}")
+    private String userName;
+    @Value("${db.password}")
+    private String password;
+
 
     @Override
     public List<Question> findQuestionsByLevel(int level) {
+        log.debug("Searching questions for level [{}]", level);
         List<Question> questions = new ArrayList<>();
         try (Connection c = DriverManager.getConnection(url + database, userName, password);
              PreparedStatement ps = c.prepareStatement("SELECT * FROM QUESTION Q  WHERE Q.LEVEL = ?");
@@ -57,6 +67,7 @@ public class QuestionRepositoryImpl implements QuestionRepository {
 
     @Override
     public boolean save(Question question) {
+        log.debug("Saving question [{}]", question);
         try (Connection c = DriverManager.getConnection(url + database, userName, password);
              PreparedStatement ps = c.prepareStatement("INSERT INTO QUESTION(level, score, text) VALUES (?, ?, ?)",
                      Statement.RETURN_GENERATED_KEYS);
@@ -90,6 +101,7 @@ public class QuestionRepositoryImpl implements QuestionRepository {
 
     @Override
     public boolean delete(Question question) {
+        log.debug("Deleting question [{}]", question);
         try (Connection c = DriverManager.getConnection(url + database, userName, password);
              PreparedStatement ps = c.prepareStatement("DELETE FROM ANSWER WHERE QUESTION_ID = ?");
              PreparedStatement ps2 = c.prepareStatement("DELETE FROM QUESTION WHERE ID = ?")) {
