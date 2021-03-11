@@ -32,29 +32,41 @@ public class TriviaJpaApplication {
 			log.info("Game is loading up...");
 			log.debug("Saving questions...");
 			List<Question> questions = new ArrayList<>(Arrays.asList(
-					new Question(100, 1, "How many wings does a mosquito have?",
-								 new HashSet<>(Arrays.asList(new Answer("Two", true, "A"), new Answer("Three", false, "B"),
-														   new Answer("Four", false, "C"), new Answer("Ten", false, "D")))),
+                    new Question(100, 1, "Which of these cities is the capital of the Republic of Moldova?",
+                            new HashSet<>(Arrays.asList(new Answer("Rome", false, "A"), new Answer("Vienna", false, "B"),
+                                    new Answer("Chisinau", true, "C"), new Answer("Monaco", false, "D")))),
 
-					new Question(100, 1, "Ascorbic acid is a form of which vitamin?",
-								 new HashSet<>(Arrays.asList(new Answer("A", false, "A"), new Answer("B", false, "B"),
-											   new Answer("C", false, "C"), new Answer("D", true, "D")))),
+                    new Question(100, 1, "Who composed the masterpiece \"Luceafarul\"?",
+                            new HashSet<>(Arrays.asList(new Answer("Shakespeare", false, "A"), new Answer("Eminescu", true, "B"),
+                                    new Answer("Pushkin", false, "C"), new Answer("Alighieri", false, "D")))),
 
-					new Question(250, 2, "Humans and chimpanzees share roughly how much DNA?",
-								 new HashSet<>(Arrays.asList(new Answer("98%", false, "A"), new Answer("77%", false, "B"),
-											   new Answer("100%", true, "C"), new Answer("0%", false, "D")))),
+                    new Question(100, 1, "What is the most dangerous breed of dog?",
+                            new HashSet<>(Arrays.asList(new Answer("chi hua hua", false, "A"), new Answer("doberman", false, "B"),
+                                    new Answer("pit bull", true, "C"), new Answer("vasea bolea", false, "D")))),
 
-					new Question(250, 2, "'Felis domesticus' is Latin for which animal?",
-								 new HashSet<>(Arrays.asList(new Answer("Dog", false, "A"), new Answer("Cat", false, "B"),
-											   new Answer("Mouse", true, "C"), new Answer("Chicken", false, "D")))),
+                    new Question(250, 2, "What is the most useful platform to study the Java programming language?",
+                            new HashSet<>(Arrays.asList(new Answer("Facebook", false, "A"), new Answer("Instagram", false, "B"),
+                                    new Answer("Tik Tok", false, "C"), new Answer("docs.oracle.com/en/java/", true, "D")))),
 
-					new Question(350, 3, "Where is the heart of the shrimp situated?",
-								 new HashSet<>(Arrays.asList(new Answer("In the head", false, "A"), new Answer("In the shoulder", true, "B"),
-											   new Answer("In the foot", false, "C"), new Answer("In the solpa", false, "D")))),
+                    new Question(250, 2, "Which of these is NOT an non-access modifier?",
+                            new HashSet<>(Arrays.asList(new Answer("abstract", false, "A"), new Answer("private", true, "B"),
+                                    new Answer("static", false, "C"), new Answer("final", false, "D")))),
 
-					new Question(350, 3, "Where is the heart of the bimbo located?",
-								 new HashSet<>(Arrays.asList(new Answer("In the bead", false, "A"), new Answer("In the boulder", true, "B"),
-											   new Answer("In the boot", false, "C"), new Answer("In the dolpa", false, "D"))))));
+                    new Question(250, 2, "Which of these is NOT a feature and component of Java?",
+                            new HashSet<>(Arrays.asList(new Answer("encapsulation", false, "A"), new Answer("platform independence", true, "B"),
+                                    new Answer("drinking beer", true, "C"), new Answer("object orientation", false, "D")))),
+
+                    new Question(350, 3, "Where are stored object reference variables?",
+                            new HashSet<>(Arrays.asList(new Answer("In Stack memory", false, "A"), new Answer("In brain", false, "B"),
+                                    new Answer("In Heap memory", true, "C"), new Answer("On the roof", false, "D")))),
+
+                    new Question(350, 3, "Who is awesome??? :)",
+                            new HashSet<>(Arrays.asList(new Answer("Java", true, "A"), new Answer("Python", false, "B"),
+                                    new Answer("C#", false, "C"), new Answer("JavaScript", false, "D")))),
+
+                    new Question(350, 3, "Which of these data types have smallest size?",
+                            new HashSet<>(Arrays.asList(new Answer("byte", true, "A"), new Answer("short", false, "B"),
+                                    new Answer("int", false, "C"), new Answer("long", false, "D"))))));
 
 			questions.forEach(questionService::save);
 			log.debug("[{}] questions saved...", questions);
